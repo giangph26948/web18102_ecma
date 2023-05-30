@@ -4,13 +4,10 @@ import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import ProductDetail from "./pages/ProductDetail";
 import NotFoundPage from "./pages/NotFound";
+import { render } from "./lib";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const app = document.querySelector("#app");
-
-const render = (content, container) => {
-    container.innerHTML = content();
-};
 
 router.on("/", () => render(HomePage, app));
 router.on("/about", () => render(AboutPage, app));

@@ -1,7 +1,18 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { products } from "../dataFake";
+import { products as data } from "../dataFake";
+import { useEffect, useState } from "../lib";
 const ProductPage = () => {
+  const [products, setProducts] = useState(data);
+  useEffect(() => {
+      const btns = document.querySelectorAll(".btn-remove");
+      for (let btn of btns) {
+          const id = btn.dataset.id;
+          btn.addEventListener("click", function () {
+              const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
+              if (!confirm) return;
+              setProducts(products.filter((product) => product.id !== +id));
+          });
+      }
+  });
     return /*html*/`
         <div class="leading-normal tracking-normal px-4">
         <header class="fixed w-full">
@@ -36,21 +47,38 @@ const ProductPage = () => {
             </div>
         </nav>
     </header>
-            <div class="py-16">
+
+            <div class=" py-16">
                 <h1 class="font-medium">Product Page</h1>
-                <div class="grid grid-cols-4 gap-8 py-5">
-                ${products
-                    .map(
-                        (product) => `
-                    <div>
-                        <a href="/product/${product.id}">${product.name}</a>
-                        <img src="${product.img}" width="50%"/>
-                    </div>
+                <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tên</th>
+                        <th>Ảnh</th>
+                        <th>Nội dung</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${products
+                        .map(
+                            (product, index) => `
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${product.name}</td>
+                                <td><img src="${product.img}" width="30%"></td>
+                                <td>${product.content}</td>
+                                <td>
+                                    <button class="btn btn-remove" data-id="${product.id}">Remove</button>
+                                </td>
+                            </tr>
+                    `
+                        )
+                        .join("")}
                     
-                `
-                    )
-                    .join("")}
-                </div>
+                </tbody>
+            </table>
             </div>
             <footer class="bg-white">
                     <div class="container mx-auto px-8">
