@@ -3,7 +3,7 @@ import { useEffect, useState } from "../lib";
 
 
 const ProductPage = () => {
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState([]);
 
   useEffect(() =>{
     fetch("https://63f5d86059c944921f67a58c.mockapi.io/products")
