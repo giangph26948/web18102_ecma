@@ -1,7 +1,16 @@
 import { products as data } from "../dataFake";
 import { useEffect, useState } from "../lib";
+
+
 const ProductPage = () => {
   const [products, setProducts] = useState(data);
+
+  useEffect(() =>{
+    fetch("https://63f5d86059c944921f67a58c.mockapi.io/products")
+    .then((response) => response.json())
+    .then((data) => setProducts(data))
+  },[]);
+
   useEffect(() => {
       const btns = document.querySelectorAll(".btn-remove");
       for (let btn of btns) {
@@ -9,7 +18,12 @@ const ProductPage = () => {
           btn.addEventListener("click", function () {
               const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
               if (!confirm) return;
-              setProducts(products.filter((product) => product.id !== +id));
+              fetch(`https://63f5d86059c944921f67a58c.mockapi.io/products/${id}`,{
+                method: "DELETE",
+              })
+              .then( () => {
+              setProducts(products.filter((product) => product.id != id));
+          });
           });
       }
   });
@@ -55,7 +69,7 @@ const ProductPage = () => {
                     <tr>
                         <th>#</th>
                         <th>Tên</th>
-                        <th>Ảnh</th>
+                        <th>Giá</th>
                         <th>Nội dung</th>
                         <th>Chức năng</th>
                     </tr>
@@ -67,8 +81,8 @@ const ProductPage = () => {
                             <tr>
                                 <td>${index + 1}</td>
                                 <td>${product.name}</td>
-                                <td><img src="${product.img}" width="30%"></td>
-                                <td>${product.content}</td>
+                                <td>${product.price}</td>
+                                <td>${product.description}</td>
                                 <td>
                                     <button class="btn btn-remove" data-id="${product.id}">Remove</button>
                                 </td>
