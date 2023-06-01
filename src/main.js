@@ -5,6 +5,7 @@ import ProductPage from "./pages/ProductPage";
 import ProductDetail from "./pages/ProductDetail";
 import NotFoundPage from "./pages/NotFound";
 import { render } from "./lib";
+import ProductAddPage from "./pages/ProductAdd";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const app = document.querySelector("#app");
@@ -12,7 +13,8 @@ const app = document.querySelector("#app");
 router.on("/", () => render(HomePage, app));
 router.on("/about", () => render(AboutPage, app));
 router.on("/product", () => render(ProductPage, app));
-router.on("/product/:id", ({ data }) => render(() => ProductDetail(data), app));
+router.on("/product/add", () => render(ProductAddPage, app));
+// router.on("/product/:id", ({ data }) => render(() => ProductDetail(data), app));
 router.notFound(() => render(NotFoundPage, app));
 
 

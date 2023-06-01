@@ -64,6 +64,7 @@ const ProductPage = () => {
 
             <div class=" py-16">
                 <h1 class="font-medium">Product Page</h1>
+                <a href="/product/add">Thêm</a>
                 <table>
                 <thead>
                     <tr>
