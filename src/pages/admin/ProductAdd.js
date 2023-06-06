@@ -1,6 +1,5 @@
-import { useEffect, router } from "../lib";
+import { useEffect, router } from "../../lib";
 const ProductAddPage = () => {
-    const API_URL = "https://63f5d86059c944921f67a58c.mockapi.io/products";
 
     useEffect(() => {
         const formAddProduct = document.querySelector("#form-add-product");
@@ -13,7 +12,7 @@ const ProductAddPage = () => {
                 price: document.querySelector("#product-price").value,
             };
 
-            fetch(API_URL, {
+            fetch(`${import.meta.env.VITE_API_URI}/products`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -21,20 +20,27 @@ const ProductAddPage = () => {
                 body: JSON.stringify(product),
             }).then(() => {
                 alert("Bạn đã thêm sản phẩm thành công");
-                setTimeout(() => {
-                    router.navigate("/product");
-                }, 1000);
-            });
+            }).then(() => {
+                router.navigate("/admin/product");
+            })
         });
     });
-    return `
-        <div class="container max-w-4xl mx-auto px-4 py-10">
+    return /*html*/`
+        <div class="container">
+        <h1>Thêm Sản Phẩm</h1>
             <form id="form-add-product">
-                <input type="text" placeholder="Tên sản phẩm"  id="product-name"/>
-                <input type="number" placeholder="Giá sản phẩm"  id="product-price"/>
-                <button>Submit</button>
+            <div class="form-group mb-3">
+                <label for="">Tên sản phẩm</label>
+                <input type="text" class="form-control"  id="product-name"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Giá sản phẩm</label>
+                <input type="number" class="form-control"  id="product-price"/>
+            </div>
+            <div class="form-group"> 
+                <button class="btn btn-primary">Thêm sản phẩm</button>
+            </div>    
             </form>
-                
         </div>
     `;
 };

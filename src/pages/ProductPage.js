@@ -1,12 +1,10 @@
-import { products as data } from "../dataFake";
 import { useEffect, useState } from "../lib";
-
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() =>{
-    fetch("https://63f5d86059c944921f67a58c.mockapi.io/products")
+    fetch(`${import.meta.env.VITE_API_URI}/products`)
     .then((response) => response.json())
     .then((data) => setProducts(data))
   },[]);
@@ -18,7 +16,7 @@ const ProductPage = () => {
           btn.addEventListener("click", function () {
               const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
               if (!confirm) return;
-              fetch(`https://63f5d86059c944921f67a58c.mockapi.io/products/${id}`,{
+              fetch(`${import.meta.env.VITE_API_URI}/products/${id}`,{
                 method: "DELETE",
               })
               .then( () => {
@@ -39,13 +37,13 @@ const ProductPage = () => {
                 <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
-                            <a href="/" class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white" aria-current="page">Home</a>
+                            <a href="/" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Home</a>
                         </li>
                         <li>
                             <a href="/about" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
                         </li>
                         <li>
-                            <a href="/product" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Products</a>
+                            <a href="/admin/product" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Products</a>
                         </li>
                         <li>
                             <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Features</a>
@@ -62,16 +60,15 @@ const ProductPage = () => {
         </nav>
     </header>
 
-            <div class=" py-16">
+            <div class="container py-16">
                 <h1 class="font-medium">Product Page</h1>
-                <a href="/product/add">Thêm</a>
-                <table>
-                <thead>
+                <a href="/admin/product/add">Thêm</a>
+                <table class="table border-4">
+                <thead class="border-4">
                     <tr>
                         <th>#</th>
                         <th>Tên</th>
                         <th>Giá</th>
-                        <th>Nội dung</th>
                         <th>Chức năng</th>
                     </tr>
                 </thead>
@@ -79,12 +76,12 @@ const ProductPage = () => {
                     ${products
                         .map(
                             (product, index) => `
-                            <tr>
+                            <tr class="border-4">
                                 <td>${index + 1}</td>
                                 <td>${product.name}</td>
                                 <td>${product.price}</td>
-                                <td>${product.description}</td>
                                 <td>
+                                    <a href="/admin/product/${product.id}/edit">Edit</a>  
                                     <button class="btn btn-remove" data-id="${product.id}">Remove</button>
                                 </td>
                             </tr>
