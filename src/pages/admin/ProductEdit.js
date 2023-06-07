@@ -46,6 +46,7 @@ const ProductEditPage = ({ id }) => {
                 alert("Bạn đã cập nhật sản phẩm thành công");
             }).then(() => {
                 router.navigate("/admin/product");
+                location.reload();
             })
         });
     });

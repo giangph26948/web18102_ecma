@@ -22,6 +22,7 @@ const ProductAddPage = () => {
                 alert("Bạn đã thêm sản phẩm thành công");
             }).then(() => {
                 router.navigate("/admin/product");
+                location.reload();
             })
         });
     });

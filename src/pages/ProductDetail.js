@@ -1,11 +1,15 @@
-import { products } from "../dataFake";
+import { useEffect, useState } from "../lib";
+
 
 const ProductDetail = ({ id }) => {
-    const product = products.find((product) => product.id === +id);
-    if (!product) return "Product not found";
-    return `
-        ${product.name}
-        <img src="${product.img}" width="20%"/>
+    const [product, setProduct] = useState({});
+    useEffect(() => {
+        fetch(`${import.meta.env.VITE_API_URI}/products/${id}`)
+            .then((response) => response.json())
+            .then((data) => setProduct(data));
+    }, []);
+    return /*html*/`
+        ${product?.name}
     `;
 };
 export default ProductDetail;

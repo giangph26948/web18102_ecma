@@ -67,7 +67,7 @@
     },
     {
       "name": "Sản phẩm 4",
-      "price": 1235555,
+      "price": "123",
       "id": 4
     },
     {
@@ -76,16 +76,41 @@
       "id": 5
     },
     {
-      "name": "hahahaha",
-      "price": "1112222",
+      "name": "cụ tổ fi fai",
+      "price": "123",
       "id": 6
     }
   ],
   "users": [
     {
-      "username": "admin",
-      "password": "12345",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$DnMyfppieL0JP8O0yPuK3OXptUq39DNMNduf9y3CbTTiV.bNJJesW",
       "id": 1
+    },
+    {
+      "email": "admin1@gmail.com",
+      "password": "$2a$10$0ffyu0qbBOmrJKu.V.AOhe1aGfV.z.ZoFMdOIyW2vGccaZp.t3eqm",
+      "id": 2
+    },
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$36ufOHcB4GT8qwZMK8tG8OIUVZV0.omLZ8GnVBHzpFiHvOiLB4Ic.",
+      "id": 3
+    },
+    {
+      "email": "admin3@gmail.com",
+      "password": "$2a$10$4N52yG167wr6zhF8nqxMye4.Q49DDFSCs8IqhjPcsk2QAnbxmGeiq",
+      "id": 4
+    },
+    {
+      "email": "giangdz@gmail.com",
+      "password": "$2a$10$V5EUxaJo5gPFFnSXPQx/kuI3/oSzL2DK37JRGm8aN9ilkua9BajAG",
+      "id": 5
+    },
+    {
+      "email": "haha@gmail.com",
+      "password": "$2a$10$hllk/uYmEUxVJb4KpcmLleFXBVwnkf6V9uX/aqhx7wKaKW5kgllIG",
+      "id": 6
     }
   ]
 }
