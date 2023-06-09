@@ -57,13 +57,13 @@
     },
     {
       "id": 2,
-      "name": "Sản phẩm 1",
-      "price": 234
+      "name": "Sản phẩm 2",
+      "price": "234"
     },
     {
       "id": 3,
-      "name": "Sản phẩm 1",
-      "price": 345
+      "name": "Sản phẩm 3",
+      "price": "345"
     },
     {
       "name": "Sản phẩm 4",
@@ -71,14 +71,24 @@
       "id": 4
     },
     {
-      "name": "cụ tổ",
+      "name": "Sản phẩm 5",
       "price": "123",
       "id": 5
     },
     {
-      "name": "cụ tổ fi fai",
+      "name": "Sản phẩm 6",
       "price": "123",
       "id": 6
+    },
+    {
+      "name": "Sản phẩm 7",
+      "price": "123",
+      "id": 7
+    },
+    {
+      "name": "Sản phẩm 8",
+      "price": "123",
+      "id": 8
     }
   ],
   "users": [
@@ -111,6 +121,16 @@
       "email": "haha@gmail.com",
       "password": "$2a$10$hllk/uYmEUxVJb4KpcmLleFXBVwnkf6V9uX/aqhx7wKaKW5kgllIG",
       "id": 6
+    },
+    {
+      "email": "hihi@gmail.com",
+      "password": "$2a$10$XQlpVPO6Fo2uo3tMt/OPLulHRGm3xyP4VdYxxhsWCusfABxOaAnxK",
+      "id": 7
+    },
+    {
+      "email": "huhu@gmail.com",
+      "password": "$2a$10$N7klgtXM1KKhfLoYkKXWLu0HRttAgnKN70ICOgUjF0xNi2.pS/Wwa",
+      "id": 8
     }
   ]
 }

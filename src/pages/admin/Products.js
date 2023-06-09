@@ -30,8 +30,15 @@ const AdminProductsPage = () =>{
       return /*html*/`
           <div class="leading-normal tracking-normal px-4">
           ${Header()}
+          <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Admin Products</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Welcome to the admin area.</p>
+            </div>
+        </div>
+        </header>
               <div class="container py-16">
-                  <h1 class="font-medium">Product Page</h1>
                   <a href="/admin/product/add">Thêm</a>
                   <table class="table border-4">
                   <thead class="border-4">

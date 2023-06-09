@@ -13,7 +13,7 @@ const Footer = () => {
                 d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
               />
             </svg>
-            Văn Giang
+            CRABSHOP
           </a>
         </div>
         <div class="flex-1">
@@ -71,7 +71,33 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <a href="https://www.freepik.com/free-photos-vectors/background" class="flex justify-center text-gray-500">Background vector created by freepik - www.freepik.com</a>
+    <div class="bg-gray-900 text-white py-4">
+  <div class="container mx-auto flex justify-between">
+    <div>
+      <h1 class="text-xl font-bold">Company Name</h1>
+      <p>123 Main Street, Anytown USA</p>
+    </div>
+    <div>
+      <h2 class="text-lg font-bold">Contact Us</h2>
+      <p>Phone: 123-456-7890</p>
+      <p>Email: info@company.com</p>
+    </div>
+    <div>
+      <h2 class="text-lg font-bold">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="#" class="text-white hover:text-gray-400">
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-400">
+          <i class="fab fa-twitter-square fa-2x"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-400">
+          <i class="fab fa-instagram-square fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
   </footer>
     `;                
 };
