@@ -65,7 +65,6 @@ const AdminProductsPage = () =>{
                       `
                           )
                           .join("")}
-                      
                   </tbody>
               </table>
               </div>

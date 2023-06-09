@@ -4,15 +4,24 @@ import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
 import ProductDetail from "./pages/ProductDetail";
 import NotFoundPage from "./pages/NotFound";
-import { render } from "./lib";
+import { render, router } from "./lib";
 import ProductAddPage from "./pages/admin/ProductAdd";
 import ProductEditPage from "./pages/admin/ProductEdit";
 import AdminProductsPage from "./pages/admin/Products";
 import SignIn from "./pages/admin/SignIn";
 import SignUp from "./pages/admin/SignUp";
 
-const router = new Navigo("/", { linksSelector: "a" });
 const app = document.querySelector("#app");
+
+// private router
+router.on("/admin/*", () => {}, {
+    before(next) {
+        const { user } = JSON.parse(localStorage.getItem("user")) || {};
+        if (!user) return (window.location.href = "/");
+        if (user && user.id != "1") return (window.location.href = "/signin");
+        next();
+    },
+});
 
 router.on("/", () => render(HomePage, app));
 router.on("/about", () => render(AboutPage, app));
