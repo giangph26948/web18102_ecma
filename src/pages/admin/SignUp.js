@@ -1,3 +1,4 @@
+import axios from "axios";
 import { router, useEffect } from "../../lib";
 
 const SignUp = () => {
@@ -12,14 +13,16 @@ const SignUp = () => {
 				email: document.querySelector("#email").value,
 				password: document.querySelector("#password").value,
 			};
-			fetch(`${import.meta.env.VITE_API_URI}/signup`, {
-				method: "POST",
-				headers: {
-					 "Content-Type": "application/json",
-					},
-				body: JSON.stringify(credential),    
-			}).then(()=>{
-				console.log("Bạn đăng ký thành công");
+			// fetch(`${import.meta.env.VITE_API_URI}/signup`, {
+			// 	method: "POST",
+			// 	headers: {
+			// 		 "Content-Type": "application/json",
+			// 		},
+			// 	body: JSON.stringify(credential),    
+			// })
+			axios.post(`${import.meta.env.VITE_API_URI}/signup`, credential)
+			.then(()=>{
+				alert("Bạn đã đăng ký thành công");
 				router.navigate("/signin");
 				location.reload();
 			}) 

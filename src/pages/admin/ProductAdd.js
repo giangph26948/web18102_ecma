@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, router } from "../../lib";
 const ProductAddPage = () => {
 
@@ -12,13 +13,15 @@ const ProductAddPage = () => {
                 price: document.querySelector("#product-price").value,
             };
 
-            fetch(`${import.meta.env.VITE_API_URI}/products`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(product),
-            }).then(() => {
+            // fetch(`${import.meta.env.VITE_API_URI}/products`, {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify(product),
+            // })
+            axios.post(`${import.meta.env.VITE_API_URI}/products`, product)
+            .then(() => {
                 alert("Bạn đã thêm sản phẩm thành công");
             }).then(() => {
                 router.navigate("/admin/product");

@@ -1,4 +1,3 @@
-import Navigo from "navigo"; // When using ES modules.
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";

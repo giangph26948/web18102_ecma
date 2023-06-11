@@ -52,42 +52,50 @@
   "products": [
     {
       "name": "Sản phẩm 1",
+      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
       "price": "1234",
       "id": 1
     },
     {
       "id": 2,
       "name": "Sản phẩm 2",
+      "image": "https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
       "price": "234"
     },
     {
       "id": 3,
       "name": "Sản phẩm 3",
+      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
       "price": "345"
     },
     {
       "name": "Sản phẩm 4",
+      "image": "https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
       "price": "123",
       "id": 4
     },
     {
       "name": "Sản phẩm 5",
+      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
       "price": "123",
       "id": 5
     },
     {
       "name": "Sản phẩm 6",
+      "image": "https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
       "price": "123",
       "id": 6
     },
     {
       "name": "Sản phẩm 7",
+      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
       "price": "123",
       "id": 7
     },
     {
       "name": "Sản phẩm 8",
-      "price": "123",
+      "image":"https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
+      "price": "1234",
       "id": 8
     }
   ],
@@ -131,6 +139,21 @@
       "email": "huhu@gmail.com",
       "password": "$2a$10$N7klgtXM1KKhfLoYkKXWLu0HRttAgnKN70ICOgUjF0xNi2.pS/Wwa",
       "id": 8
+    },
+    {
+      "email": "kaka@gmail.com",
+      "password": "$2a$10$2sPSNPgli4llo.pZodgyFegpQp7UPrK4JxzYNwCcD50J63tFERO7q",
+      "id": 9
+    },
+    {
+      "email": "kkk@gmail.com",
+      "password": "$2a$10$b7RgC0EyRPMaNUiVbFCgXe.FwRvXQyPwInAIFypuatUY8luSzLvwW",
+      "id": 10
+    },
+    {
+      "email": "kuku@gmail.com",
+      "password": "$2a$10$yR.i8N.uRKgTiS1sA3nt9uS5zhFdmy2TkLCD3/OTI.D61BFYwZ.3W",
+      "id": 11
     }
   ]
 }

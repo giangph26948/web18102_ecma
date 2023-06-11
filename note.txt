@@ -5,3 +5,84 @@ Bước 3: Truy cập vào thư mục we18102 vừa tạo
     cd we18102 
     code .
 //github.com/sontv8/WD18106
+<table class="table border-4">
+                   <thead class="border-4">
+                       <tr>
+                           <th>ID</th>
+                           <th>Tên sản phẩm</th>
+                           <th>Giá sản phẩm</th>
+                           <th>Chức năng</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                      ${products
+                           .map(
+                               (product, index) => `
+                               <tr class="border-4">
+                                   <td>${index + 1}</td>
+                                   <td>${product.name}</td>
+                                   <td>${product.price}</td>
+                                   <td>
+                                       <a href="/admin/product/${product.id}/edit">Edit</a>  
+                                       <button class="btn btn-remove" data-id="${product.id}">Remove</button>
+                                   </td>
+                               </tr>
+                       `
+                           )
+                           .join("")}
+                   </tbody>
+               </table>
+
+
+               <div class="flex flex-col m-4 p-4 bg-white rounded-lg shadow-lg">
+                  <h2 class="text-lg font-bold mb-4">Quản lý sản phẩm</h2>
+                  <div class="flex flex-col">
+                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                          <table class="min-w-full divide-y divide-gray-200 h-full flex flex-col justify-center w-1/4">
+                            <thead class="bg-gray-50">
+                              <tr>
+                              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tên sản phẩm</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Giá</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Chức năng</th>
+                              </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                            ${products
+                                .map(
+                                    (product, index) => `
+                              <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <div>${index + 1}</td></div>
+                                <td>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                  <div class="flex items-center">
+                                    <div class="ml-4">
+                                      <div class="text-sm font-medium text-gray-900">
+                                      ${product.name}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                  <div class="text-sm text-gray-900">${product.price}</div>
+                                </td>
+                                <td >
+                                    <a class="text-indigo-600 hover:text-indigo-900" href="/admin/product/${product.id}/edit">Edit</a>  
+                                    <button class="btn btn-remove" data-id="${product.id}">Remove</button>
+                                </td>
+                              </tr>
+                              `
+                           )
+                           .join("")}
+                              <!-- More items... -->
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>

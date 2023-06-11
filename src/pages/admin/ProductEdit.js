@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState, router } from "../../lib";
 import joi from "joi";
 const productSchema = joi.object({
@@ -10,11 +11,11 @@ const ProductEditPage = ({ id }) => {
 
     // lấy ra thông tin sản phẩm để hiển thị form
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URI}/products/${id}`)
-            .then((response) => response.json())
-            .then((data) => {
-                setProduct(data);
-            });
+        // fetch(`${import.meta.env.VITE_API_URI}/products/${id}`)
+        //     .then((response) => response.json())
+        //     .then((data) => { setProduct(data);});
+        axios.get(`${import.meta.env.VITE_API_URI}/products/${id}`)
+        .then(({data}) => setProduct(data));
     }, []);
 
     // cập nhật sản phẩm
@@ -36,13 +37,15 @@ const ProductEditPage = ({ id }) => {
                 errorsElement.innerHTML = errors.map((err) => `<p>${err}</p>`).join("");
                 return;
             }
-            fetch(`${import.meta.env.VITE_API_URI}/products/${id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            }).then(() => {
+            // fetch(`${import.meta.env.VITE_API_URI}/products/${id}`, {
+            //     method: "PUT",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify(formData),
+            // })
+            axios.put(`${import.meta.env.VITE_API_URI}/products/${id}`, formData)
+            .then(() => {
                 alert("Bạn đã cập nhật sản phẩm thành công");
             }).then(() => {
                 router.navigate("/admin/product");

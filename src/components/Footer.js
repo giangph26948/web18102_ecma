@@ -74,7 +74,7 @@ const Footer = () => {
     <div class="bg-gray-900 text-white py-4">
   <div class="container mx-auto flex justify-between">
     <div>
-      <h1 class="text-xl font-bold">Company Name</h1>
+      <h1 class="text-xl font-bold">CRAB SHOP</h1>
       <p>123 Main Street, Anytown USA</p>
     </div>
     <div>
