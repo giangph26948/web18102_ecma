@@ -55,56 +55,64 @@
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
       "price": "1234",
-      "id": 1
+      "id": 1,
+      "categoryId": 1
     },
     {
       "id": 2,
       "name": "Sản phẩm 2",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
-      "price": "234"
+      "price": "234",
+      "categoryId": 2
     },
     {
       "id": 3,
       "name": "Sản phẩm 3",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
-      "price": "345"
+      "price": "345",
+      "categoryId": 1
     },
     {
       "name": "Sản phẩm 4",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
       "price": "123",
-      "id": 4
+      "id": 4,
+      "categoryId": 2
     },
     {
       "name": "Sản phẩm 5",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
       "price": "123",
-      "id": 5
+      "id": 5,
+      "categoryId": 1
     },
     {
       "name": "Sản phẩm 6",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
       "price": "123",
-      "id": 6
+      "id": 6,
+      "categoryId": 2
     },
     {
       "name": "Sản phẩm 7",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
       "price": "123",
-      "id": 7
+      "id": 7,
+      "categoryId": 1
     },
     {
       "name": "Sản phẩm 8",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
       "price": "1234",
-      "id": 8
+      "id": 8,
+      "categoryId": 2
     }
   ],
   "posts" : [
@@ -137,5 +145,9 @@
       "password": "$2a$10$36ufOHcB4GT8qwZMK8tG8OIUVZV0.omLZ8GnVBHzpFiHvOiLB4Ic.",
       "id": 3
     }
+  ],
+  "categories": [
+      { "id": 1, "name": "Sản phẩm dự án A" },
+      { "id": 2, "name": "Sản phẩm dự án B" }
   ]
 }

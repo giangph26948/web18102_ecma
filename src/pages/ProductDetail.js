@@ -7,13 +7,12 @@ import Footer from "../components/Footer";
 const ProductDetail = ({ id }) => {
     const [product, setProduct] = useState({});
     useEffect(() => {
-        // fetch(`${import.meta.env.VITE_API_URI}/products/${id}`)
-        //     .then((response) => response.json())
-        //     .then((data) => setProduct(data));
+
         axios.get(`${import.meta.env.VITE_API_URI}/products/${id}`)
         .then(({data}) => setProduct(data));
     }, []);
     return /*html*/`
+                <div class="leading-normal tracking-normal px-4">
                 ${Header()}
                 <div class="flex flex-col items-center justify-center h-screen bg-gray-100">
                 <div class="max-w-screen-lg mx-auto p-6 bg-white rounded-lg shadow-md">
@@ -29,29 +28,10 @@ const ProductDetail = ({ id }) => {
                         <a href="https://github.com/giangph26948/web18102_ecma" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">Link dự án</a>
                     </div>
                     </div>
+                    
                     <hr class="my-6 border-gray-300">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Similar Products</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img src="https://via.placeholder.com/400x300" alt="Product Image" class="w-full">
-                        <div class="p-4">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Product Name</h4>
-                        <p class="text-gray-700 mb-2">Price: $99.99</p>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                            Add to Cart
-                        </button>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                        <img src="https://via.placeholder.com/400x300" alt="Product Image" class="w-full">
-                        <div class="p-4">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Product Name</h4>
-                        <p class="text-gray-700 mb-2">Price: $99.99</p>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                            Add to Cart
-                        </button>
-                        </div>
-                    </div>
                     <div class="bg-white rounded-lg overflow-hidden shadow-md">
                         <img src="https://via.placeholder.com/400x300" alt="Product Image" class="w-full">
                         <div class="p-4">
@@ -66,6 +46,7 @@ const ProductDetail = ({ id }) => {
                 </div>
                 </div>
                 ${Footer()}
+                </div>
     `;
 };
 export default ProductDetail;

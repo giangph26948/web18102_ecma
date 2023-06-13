@@ -4,35 +4,54 @@ Bước 2: Sử dụng npm cài đặt vitejs và tạo project
 Bước 3: Truy cập vào thư mục we18102 vừa tạo
     cd we18102 
     code .
-//github.com/sontv8/WD18106
-<table class="table border-4">
-                   <thead class="border-4">
-                       <tr>
-                           <th>ID</th>
-                           <th>Tên sản phẩm</th>
-                           <th>Giá sản phẩm</th>
-                           <th>Chức năng</th>
-                       </tr>
-                   </thead>
-                   <tbody>
-                      ${products
-                           .map(
-                               (product, index) => `
-                               <tr class="border-4">
-                                   <td>${index + 1}</td>
-                                   <td>${product.name}</td>
-                                   <td>${product.price}</td>
-                                   <td>
-                                       <a href="/admin/product/${product.id}/edit">Edit</a>  
-                                       <button class="btn btn-remove" data-id="${product.id}">Remove</button>
-                                   </td>
-                               </tr>
-                       `
-                           )
-                           .join("")}
-                   </tbody>
-               </table>
 
+
+
+// Chạy json-server và dev
+
+B1: npm i -g json-server concurrently
+B2: tạo file db.json ở thư mục gốc
+B3: Truy cập file package.json 
+    "scripts": {
+        "dev": "concurrently vite \"json-server --watch db.json\"",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+B4: npm run dev
+
+// Muốn làm việc với authenticate, 
+B1: npm i -g json-server-auth
+B2: Truy cập db.json. Tạo 1 collection tên "users"
+B3: Truy cập package.json. sửa lại thành 
+    "dev": "concurrently vite \"json-server-auth --watch db.json\"",
+
+Lưu ý: Nếu powershell chưa được cấp quyền chạy json-server thì sử dụng
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+// Test API 
+Cài đặt postman để test API
+
+
+==============
+Lưu ý khi định nghĩa trường dữ liệu để có thể sử dụng relationship
+
+ví dụ :
+
+product: {
+    categoryId: 1
+}
+
+categories: [
+    { id: 1, name:"Category A"}
+]
+
+
+Lấy ra các sản phẩm thuộc danh mục có id là 1
+// http://localhost:3000/categories/1?_embed=products
+
+
+lấy ra thông tin danh mục có id sản phẩm là 1
+// http://localhost:3000/products/1?_expand=category
+//github.com/sontv8/WD18106
 
                <div class="flex flex-col m-4 p-4 bg-white rounded-lg shadow-lg">
                   <h2 class="text-lg font-bold mb-4">Quản lý sản phẩm</h2>
