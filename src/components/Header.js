@@ -5,7 +5,7 @@ const Header = () => {
         <div class="flex flex-wrap items-center space-x-8  max-w-screen-xl  mx-auto">
             <a href="/" class="flex items-center ">
                 <img src="https://raw.githubusercontent.com/themesberg/landwind/f8be851cc8b4b44ff9d842ca8f5149d7911af88c/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CRABSHOP</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CRAB PROJECT</span>
             </a>
             <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">

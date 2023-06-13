@@ -22,7 +22,7 @@ const SignIn = () =>{
             localStorage.setItem("user", JSON.stringify(data));
         })
         .then(()=>{
-            router.navigate("/admin/product")
+            router.navigate("/admin")
             location.reload();
         })
         });

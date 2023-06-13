@@ -52,53 +52,75 @@
   "products": [
     {
       "name": "Sản phẩm 1",
-      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
+      "description": "Mô tả dự án mẫu",
       "price": "1234",
       "id": 1
     },
     {
       "id": 2,
       "name": "Sản phẩm 2",
-      "image": "https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
+      "description": "Mô tả dự án mẫu",
       "price": "234"
     },
     {
       "id": 3,
       "name": "Sản phẩm 3",
-      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
+      "description": "Mô tả dự án mẫu",
       "price": "345"
     },
     {
       "name": "Sản phẩm 4",
-      "image": "https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
+      "description": "Mô tả dự án mẫu",
       "price": "123",
       "id": 4
     },
     {
       "name": "Sản phẩm 5",
-      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
+      "description": "Mô tả dự án mẫu",
       "price": "123",
       "id": 5
     },
     {
       "name": "Sản phẩm 6",
-      "image": "https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
+      "description": "Mô tả dự án mẫu",
       "price": "123",
       "id": 6
     },
     {
       "name": "Sản phẩm 7",
-      "image": "https://img.freepik.com/free-photo/white-t-shirts-with-copy-space-gray-background_53876-104920.jpg?w=1480&t=st=1686497709~exp=1686498309~hmac=59dc86666816f8e700e605262b4e3a64ce1f7f66041a8f7b8eddef51d9dddcaa",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
+      "description": "Mô tả dự án mẫu",
       "price": "123",
       "id": 7
     },
     {
       "name": "Sản phẩm 8",
-      "image":"https://img.freepik.com/free-photo/black-t-shirts-with-copy-space_53876-102012.jpg?w=1480&t=st=1686497695~exp=1686498295~hmac=a685848f48dcc5368cf7fcbfd28b07ac0a206ab26ab8cdbb230b585a38bd4ac9",
+      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
+      "description": "Mô tả dự án mẫu",
       "price": "1234",
       "id": 8
     }
   ],
+  "posts" : [
+    { "id": 1,
+     "title": "ĐƠN GIẢN LÀ PHONG CÁCH",
+     "image": "https://img.freepik.com/free-photo/giant-office-buildings_1137-299.jpg?w=900&t=st=1686628940~exp=1686629540~hmac=e26240c854e5f085bd4f2d2748b1fa0261d6f374548a51f7150a9920f42c03f2",
+      "content": "Những món trang phục cơ bản và cổ điển luôn cần thiết cho mọi tủ quần áo. ĐƠN GIẢN cũng là một PHONG CÁCH." },
+    { "id": 2,
+     "title": "STAY HOME",
+     "image": "https://img.freepik.com/premium-photo/flag-corner-football-pitch_1137-411.jpg",
+      "content": "Ở nhà thì mặc gì? Thoải mái là trên hết nhỉ! Với GSHOP thì ko những THOẢI MÁI, mà còn phải ĐẸP nữa nha~" },
+    { "id": 3,
+     "title": "GO SCHOOL",
+     "image": "https://img.freepik.com/premium-photo/skyscrapers-downtown-chicago_538646-6887.jpg",
+      "content": "Ở Trường thì mặc gì? Thoải mái là trên hết nhỉ! Với GSHOP thì ko những THOẢI MÁI, mà còn phải ĐẸP nữa nha~" }
+],
   "users": [
     {
       "email": "admin@gmail.com",
@@ -114,46 +136,6 @@
       "email": "admin2@gmail.com",
       "password": "$2a$10$36ufOHcB4GT8qwZMK8tG8OIUVZV0.omLZ8GnVBHzpFiHvOiLB4Ic.",
       "id": 3
-    },
-    {
-      "email": "admin3@gmail.com",
-      "password": "$2a$10$4N52yG167wr6zhF8nqxMye4.Q49DDFSCs8IqhjPcsk2QAnbxmGeiq",
-      "id": 4
-    },
-    {
-      "email": "giangdz@gmail.com",
-      "password": "$2a$10$V5EUxaJo5gPFFnSXPQx/kuI3/oSzL2DK37JRGm8aN9ilkua9BajAG",
-      "id": 5
-    },
-    {
-      "email": "haha@gmail.com",
-      "password": "$2a$10$hllk/uYmEUxVJb4KpcmLleFXBVwnkf6V9uX/aqhx7wKaKW5kgllIG",
-      "id": 6
-    },
-    {
-      "email": "hihi@gmail.com",
-      "password": "$2a$10$XQlpVPO6Fo2uo3tMt/OPLulHRGm3xyP4VdYxxhsWCusfABxOaAnxK",
-      "id": 7
-    },
-    {
-      "email": "huhu@gmail.com",
-      "password": "$2a$10$N7klgtXM1KKhfLoYkKXWLu0HRttAgnKN70ICOgUjF0xNi2.pS/Wwa",
-      "id": 8
-    },
-    {
-      "email": "kaka@gmail.com",
-      "password": "$2a$10$2sPSNPgli4llo.pZodgyFegpQp7UPrK4JxzYNwCcD50J63tFERO7q",
-      "id": 9
-    },
-    {
-      "email": "kkk@gmail.com",
-      "password": "$2a$10$b7RgC0EyRPMaNUiVbFCgXe.FwRvXQyPwInAIFypuatUY8luSzLvwW",
-      "id": 10
-    },
-    {
-      "email": "kuku@gmail.com",
-      "password": "$2a$10$yR.i8N.uRKgTiS1sA3nt9uS5zhFdmy2TkLCD3/OTI.D61BFYwZ.3W",
-      "id": 11
     }
   ]
 }

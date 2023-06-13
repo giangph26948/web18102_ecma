@@ -1,10 +1,17 @@
-import { posts } from "../dataFake";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "../lib";
+import axios from "axios";
 
 const HomePage = () => {
+    const [posts, setPosts] = useState([]);
+    useEffect(()=>{
+        axios.get(`${import.meta.env.VITE_API_URI}/posts`)
+        .then(({data}) => setPosts(data));
+    },[]);
+
     return /*html*/ `
-        <div class="leading-normal tracking-normal">
+        <div class="leading-normal tracking-normal px-4">
         ${Header()}
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
@@ -20,23 +27,34 @@ const HomePage = () => {
         </div>
     </section>
 
-                    <div class="px-8">
-                    <h2 class="font-medium">Bài viết</h2>
-                    <div class="grid grid-cols-3 gap-8 space-x-4">
-                        ${posts
-                            .map(function (post) {
-                                return `<div>
-                                <h3>${post.title}</h3>
-                                <p>${post.content}</p>
-                            </div>`;
-                            })
-                            .join("")}
+                   
+                <section class="py-5">
+        <div class="">
+            <div class="grid grid-cols-3 gap-8">
+        ${posts.map((post) => /*html*/`
+        <!-- Section-->
+                <div class="mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top w-full h-48 object-cover object-center" src="${post.image}" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">${post.title}</h5>
+                                 ${post.content}
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                    </div>
-                    ${Footer()}
-            </div>
+        `).join("")}
         </div>
+        </div>
+        </section>
+                ${Footer()}
+                </div>
+                    
     `;
 };
 

@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useEffect, useState, router } from "../../lib";
+import { useEffect, useState, router } from "../../../lib";
 import joi from "joi";
 const productSchema = joi.object({
     name: joi.string().required().min(3).max(30),
-    price: joi.number().required(),
+    description: joi.string().required().min(3).max(100),
 });
 const ProductEditPage = ({ id }) => {
 
@@ -11,9 +11,7 @@ const ProductEditPage = ({ id }) => {
 
     // lấy ra thông tin sản phẩm để hiển thị form
     useEffect(() => {
-        // fetch(`${import.meta.env.VITE_API_URI}/products/${id}`)
-        //     .then((response) => response.json())
-        //     .then((data) => { setProduct(data);});
+
         axios.get(`${import.meta.env.VITE_API_URI}/products/${id}`)
         .then(({data}) => setProduct(data));
     }, []);
@@ -29,7 +27,7 @@ const ProductEditPage = ({ id }) => {
 
             const formData = {
                 name: document.querySelector("#product-name").value,
-                price: document.querySelector("#product-price").value,
+                description: document.querySelector("#product-description").value,
             };
             const { error } = productSchema.validate(formData, { abortEarly: false });
             if (error) {
@@ -37,13 +35,7 @@ const ProductEditPage = ({ id }) => {
                 errorsElement.innerHTML = errors.map((err) => `<p>${err}</p>`).join("");
                 return;
             }
-            // fetch(`${import.meta.env.VITE_API_URI}/products/${id}`, {
-            //     method: "PUT",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body: JSON.stringify(formData),
-            // })
+
             axios.put(`${import.meta.env.VITE_API_URI}/products/${id}`, formData)
             .then(() => {
                 alert("Bạn đã cập nhật sản phẩm thành công");
@@ -57,7 +49,7 @@ const ProductEditPage = ({ id }) => {
     if (!product) return "Product not found";
     return /*html*/`
         <div class="container">
-            <h1>Cập nhật sản phẩm</h1>
+            <h1 class="text-lg font-bold mb-4">Cập nhật sản phẩm</h1>
             <div id="errors"></div>
             <form id="form-edit-product">
             <div class="form-group mb-3">
@@ -65,8 +57,8 @@ const ProductEditPage = ({ id }) => {
                 <input type="text" class="form-control"  id="product-name" value="${product.name ?? ""}"/> 
             </div>
             <div class="form-group mb-3">
-                <label>Giá sản phẩm</label>
-                <input type="number" class="form-control"  id="product-price" value="${product.price ?? ""}"/>
+                <label>Mô tả sản phẩm</label>
+                <input type="text" class="form-control"  id="product-description" value="${product.description ?? ""}"/>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary">Cập nhật sản phẩm</button>
