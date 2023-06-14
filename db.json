@@ -51,7 +51,7 @@
   ],
   "products": [
     {
-      "name": "Sản phẩm 1",
+      "name": "Sản phẩm dự án 1",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
       "price": "1234",
@@ -60,7 +60,7 @@
     },
     {
       "id": 2,
-      "name": "Sản phẩm 2",
+      "name": "Sản phẩm dự án 2",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
       "price": "234",
@@ -68,14 +68,14 @@
     },
     {
       "id": 3,
-      "name": "Sản phẩm 3",
+      "name": "Sản phẩm dự án 3",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
       "price": "345",
       "categoryId": 1
     },
     {
-      "name": "Sản phẩm 4",
+      "name": "Sản phẩm dự án 4",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
       "price": "123",
@@ -83,7 +83,7 @@
       "categoryId": 2
     },
     {
-      "name": "Sản phẩm 5",
+      "name": "Sản phẩm dự án 5",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
       "description": "Mô tả dự án mẫu",
       "price": "123",
@@ -91,44 +91,34 @@
       "categoryId": 1
     },
     {
-      "name": "Sản phẩm 6",
+      "name": "Sản phẩm dự án 6",
       "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
       "description": "Mô tả dự án mẫu",
       "price": "123",
       "id": 6,
       "categoryId": 2
-    },
-    {
-      "name": "Sản phẩm 7",
-      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-342.jpg?w=1480&t=st=1686624774~exp=1686625374~hmac=b244ac1c057160ef95636beff2df644a4950307b313762c368c6ef6765d8510c",
-      "description": "Mô tả dự án mẫu",
-      "price": "123",
-      "id": 7,
-      "categoryId": 1
-    },
-    {
-      "name": "Sản phẩm 8",
-      "image": "https://img.freepik.com/free-photo/businessmen-hands-white-table-with-documents-drafts_176420-344.jpg?w=1480&t=st=1686624841~exp=1686625441~hmac=22d2836958088d113891b0d01ee0a6631acc97c626b5e9149673809a34a19d45",
-      "description": "Mô tả dự án mẫu",
-      "price": "1234",
-      "id": 8,
-      "categoryId": 2
     }
   ],
-  "posts" : [
-    { "id": 1,
-     "title": "ĐƠN GIẢN LÀ PHONG CÁCH",
-     "image": "https://img.freepik.com/free-photo/giant-office-buildings_1137-299.jpg?w=900&t=st=1686628940~exp=1686629540~hmac=e26240c854e5f085bd4f2d2748b1fa0261d6f374548a51f7150a9920f42c03f2",
-      "content": "Những món trang phục cơ bản và cổ điển luôn cần thiết cho mọi tủ quần áo. ĐƠN GIẢN cũng là một PHONG CÁCH." },
-    { "id": 2,
-     "title": "STAY HOME",
-     "image": "https://img.freepik.com/premium-photo/flag-corner-football-pitch_1137-411.jpg",
-      "content": "Ở nhà thì mặc gì? Thoải mái là trên hết nhỉ! Với GSHOP thì ko những THOẢI MÁI, mà còn phải ĐẸP nữa nha~" },
-    { "id": 3,
-     "title": "GO SCHOOL",
-     "image": "https://img.freepik.com/premium-photo/skyscrapers-downtown-chicago_538646-6887.jpg",
-      "content": "Ở Trường thì mặc gì? Thoải mái là trên hết nhỉ! Với GSHOP thì ko những THOẢI MÁI, mà còn phải ĐẸP nữa nha~" }
-],
+  "posts": [
+    {
+      "id": 1,
+      "title": "ĐƠN GIẢN LÀ PHONG CÁCH",
+      "image": "https://img.freepik.com/free-photo/giant-office-buildings_1137-299.jpg?w=900&t=st=1686628940~exp=1686629540~hmac=e26240c854e5f085bd4f2d2748b1fa0261d6f374548a51f7150a9920f42c03f2",
+      "content": "Những món trang phục cơ bản và cổ điển luôn cần thiết cho mọi tủ quần áo. ĐƠN GIẢN cũng là một PHONG CÁCH."
+    },
+    {
+      "id": 2,
+      "title": "STAY HOME",
+      "image": "https://img.freepik.com/premium-photo/flag-corner-football-pitch_1137-411.jpg",
+      "content": "Ở nhà thì mặc gì? Thoải mái là trên hết nhỉ! Với GSHOP thì ko những THOẢI MÁI, mà còn phải ĐẸP nữa nha~"
+    },
+    {
+      "id": 3,
+      "title": "GO SCHOOL",
+      "image": "https://img.freepik.com/premium-photo/skyscrapers-downtown-chicago_538646-6887.jpg",
+      "content": "Ở Trường thì mặc gì? Thoải mái là trên hết nhỉ! Với GSHOP thì ko những THOẢI MÁI, mà còn phải ĐẸP nữa nha~"
+    }
+  ],
   "users": [
     {
       "email": "admin@gmail.com",
@@ -146,8 +136,41 @@
       "id": 3
     }
   ],
+  "menus": [
+    {
+      "name": "Home",
+      "link": "/",
+      "id": 1
+    },
+    {
+      "name": "About",
+      "link": "/about",
+      "id": 2
+    },
+    {
+      "name": "Products",
+      "link": "/product",
+      "id": 3
+    },
+    {
+      "name": "Signin",
+      "link": "/signin",
+      "id": 3
+    },
+    {
+      "name": "Signup",
+      "link": "/signup",
+      "id": 3
+    }
+  ],
   "categories": [
-      { "id": 1, "name": "Sản phẩm dự án A" },
-      { "id": 2, "name": "Sản phẩm dự án B" }
+    {
+      "id": 1,
+      "name": "Sản phẩm dự án A"
+    },
+    {
+      "id": 2,
+      "name": "Sản phẩm dự án B"
+    }
   ]
 }

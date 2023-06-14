@@ -19,6 +19,7 @@ const Admin = () => {
                     <h1 class="text-2xl font-bold">Trang quản lý</h1>
                     <a href="/admin/product" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Quản lý Products</a>
                     <a href="/admin/post" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Quản lý Posts</a>
+                    <a href="/admin/menu" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Quản lý Menu</a>
                     </div>
                     </div>
               </div>

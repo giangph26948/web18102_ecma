@@ -13,6 +13,10 @@ import AdminPostsPage from "./pages/admin/posts/Posts";
 import PostAddPage from "./pages/admin/posts/PostAdd";
 import PostEditPage from "./pages/admin/posts/PostEdit";
 import Admin from "./pages/admin/Admin";
+import CategoryPage from "./pages/admin/products/Category";
+import MenuPage from "./pages/admin/menu/Menu";
+import MenuAddPage from "./pages/admin/menu/MenuAdd";
+import MenuEditPage from "./pages/admin/menu/MenuEdit";
 
 const app = document.querySelector("#app");
 
@@ -31,6 +35,7 @@ router.on("/about", () => render(AboutPage, app));
 router.on("/product", () => render(ProductPage, app));
 router.on("/signin", () => render(SignIn, app));
 router.on("/signup", () => render(SignUp, app));
+router.on("/category/:id", ({ data }) => render(() => CategoryPage(data), app));
 router.on("/product/:id", ({ data }) => render(() => ProductDetail(data), app));
 
 //admin
@@ -43,7 +48,10 @@ router.on("/admin/product/:id/edit", ({ data }) => render(() => ProductEditPage(
 router.on("/admin/post", () => render(AdminPostsPage, app));
 router.on("/admin/post/add", () => render(PostAddPage, app));
 router.on("/admin/post/:id/edit", ({ data }) => render(() => PostEditPage(data), app));
-
+//menu
+router.on("/admin/menu", () => render(MenuPage, app));
+router.on("/admin/menu/add", () => render(MenuAddPage, app));
+router.on("/admin/menu/:id/edit", ({ data }) => render(() => MenuEditPage(data), app));
 
 
 router.notFound(() => render(NotFoundPage, app));
